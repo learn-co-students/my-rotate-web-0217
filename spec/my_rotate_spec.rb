@@ -19,25 +19,35 @@ describe "#my_rotate" do
   end
 
   context "no argument" do
-    it "defaults to shifting every element one left" do
+    it "defaults to shifting every element one left for a 2 element array" do
       expect(["bear", "tiger"].my_rotate).to eq(["tiger", "bear"])
+    end
+
+    it "defaults to shifting every element one left for a 4 element array" do
       expect([1, 3, 5, 7].my_rotate).to eq([3, 5, 7, 1])
+    end
+
+    it "defaults to shifting every element one left for a 10 element array" do
       expect(alphabet.my_rotate).to eq(["b", "c", "d", "e", "f", "g", "h", "i", "j", "a"])
     end
   end
 
   context "with postive argument" do
-    it "moves elements arg number of times to the left" do
+    it "moves elements arg number of times left for a 2 element array" do
       expect(fishes.my_rotate(1)).to eq(["blue tang", "clown fish"])
       expect(fishes.my_rotate(2)).to eq(fishes)
       expect(fishes.my_rotate(3)).to eq(["blue tang", "clown fish"])
       expect(fishes.my_rotate(4)).to eq(fishes)
+    end
 
+    it "moves elements arg number of times left for a 3 element array" do
       expect(animals.my_rotate(1)).to eq(["hedgehog", "wallaby", "aardvark"])
       expect(animals.my_rotate(2)).to eq(["wallaby", "aardvark", "hedgehog"])
       expect(animals.my_rotate(3)).to eq(animals)
       expect(animals.my_rotate(6)).to eq(animals)
+    end
 
+    it "moves elements arg number of times left for a 4 element array" do
       expect(butterflies.my_rotate(1)).to eq(["viceroy", "tiger swallowtail", "goliath birdwing", "monarch"])
       expect(butterflies.my_rotate(2)).to eq(["tiger swallowtail", "goliath birdwing", "monarch", "viceroy"])
       expect(butterflies.my_rotate(3)).to eq(["goliath birdwing", "monarch", "viceroy", "tiger swallowtail"]) 
@@ -47,17 +57,21 @@ describe "#my_rotate" do
   end
 
   context "with negative argument" do
-    it "moves elements arg number of times to the rigth" do
+    it "moves elements arg number of times right for a 2 element array" do
       expect(fishes.my_rotate(-1)).to eq(["blue tang", "clown fish"])
       expect(fishes.my_rotate(-2)).to eq(fishes)
       expect(fishes.my_rotate(-3)).to eq(["blue tang", "clown fish"])
       expect(fishes.my_rotate(-4)).to eq(fishes)
+    end
 
+    it "moves elements arg number of times right for a 3 element array" do
       expect(animals.my_rotate(-1)).to eq(["wallaby", "aardvark", "hedgehog"])
       expect(animals.my_rotate(-2)).to eq(["hedgehog", "wallaby", "aardvark"])
       expect(animals.my_rotate(-3)).to eq(animals)
       expect(animals.my_rotate(-6)).to eq(animals)
+    end
 
+    it "moves elements arg number of times right for a 4 element array" do
       expect(butterflies.my_rotate(-1)).to eq(["goliath birdwing", "monarch", "viceroy", "tiger swallowtail"])
       expect(butterflies.my_rotate(-2)).to eq(["tiger swallowtail", "goliath birdwing", "monarch", "viceroy"])
       expect(butterflies.my_rotate(-3)).to eq(["viceroy", "tiger swallowtail", "goliath birdwing", "monarch"]) 
