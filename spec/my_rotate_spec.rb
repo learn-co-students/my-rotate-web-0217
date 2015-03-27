@@ -67,6 +67,11 @@ describe "#my_rotate" do
   end
 
   context "edge cases" do
+    it "doesn't rotate when passed an argument of 0" do
+      expect([1,2,3,4].my_rotate(0)).to eq([1,2,3,4])
+      expect(alphabet.my_rotate(0)).to eq(alphabet)
+    end
+
     it "doesn't error out when given an array of one element" do
       expect([].my_rotate).to eq([])
       expect([].my_rotate(-9)).to eq([])
