@@ -8,6 +8,14 @@ resources: 1
 
 ![theme park carousel picture](https://s3-us-west-2.amazonaws.com/web-dev-readme-photos/cs/carousel.jpg)
 
+## Contents
+
+1. Objective
+2. About Rotate
+3. Notes
+4. Bonus
+5. Resources
+
 ## Objective
 
 You will be building out Ruby's `#rotate` method. It shouldn't change the array it's called on.
@@ -61,6 +69,42 @@ animals.my_rotate(-2)
 ## Notes
 
 You may not call on Ruby's `#rotate` method to accomplish this task.
+
+## Bonus
+
+Rotating to one to the left could be pretty easy:
+
+```ruby
+odd_numbers = [ 3, 5, 7, 9 ]
+odd_numbers.my_rotate(1)
+# => [ 5, 7, 9, 3 ]
+```
+Your steps to accomplish the code above code might look something like this:
+
+```ruby
+# new_array = odd_numbers[1..-1]
+# => [ 5, 7, 9 ]
+# new_array << odd_numbers[0]
+# => [ 5, 7, 9, 3 ]
+```
+
+Likewise, rotating one to the right could be pretty easy too:
+
+```ruby
+odd_numbers = [ 3, 5, 7, 9 ]
+odd_numbers.my_rotate(-1)
+# => [9, 3, 5, 7]
+```
+Your steps to accomplish the code above code might look something like this:
+
+```ruby
+# new_array = odd_numbers[0..-2]
+# => [ 3, 5, 7 ]
+# new_array.insert(0, odd_numbers[-1])
+# => [9, 3, 5, 7]
+```
+
+However, if you want an extra challenge, rotate the array *in place* (don't just chop up an array and add the first element to the end/last element to the beginning).
 
 ## Resources
 
