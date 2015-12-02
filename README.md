@@ -105,3 +105,5 @@ However, if you want an extra challenge, rotate the array *in place* (don't just
 ## Resources
 
 * [Ruby's Rotate Method](http://ruby-doc.org/core-2.2.0/Array.html#method-i-rotate)
+
+<a href='https://learn.co/lessons/my-rotate' data-visibility='hidden'>View this lesson on Learn.co</a>
