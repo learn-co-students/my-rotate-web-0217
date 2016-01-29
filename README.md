@@ -106,4 +106,4 @@ However, if you want an extra challenge, rotate the array *in place* (don't just
 
 * [Ruby's Rotate Method](http://ruby-doc.org/core-2.2.0/Array.html#method-i-rotate)
 
-<a href='https://learn.co/lessons/my-rotate' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/my-rotate' title='My Rotate'>My Rotate</a> on Learn.co and start learning to code for free.</p>
